@@ -1,0 +1,120 @@
+.header {
+    // Hamburger Open Style
+    &.open {
+        .overlay {
+            display: block;
+        }
+
+        .header__toogle {
+            > span:first-child {
+                transform: rotate(45deg);
+            }
+
+            > span:nth-child(2) {
+                opacity: 0;
+            }
+
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    &__menu {
+        background: $White;
+        padding: 1.625rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 1.5rem * 2);
+        margin-top: 1.5rem;
+        border-radius: 5px;
+
+        a {
+            display: block;
+            padding: 0.625rem;
+            color: $DarkBlue;
+            text-align: center;
+        }
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+
+        // background-color: $DarkBlue;
+        background-image: linear-gradient($DarkBlue, transparent);
+    }
+
+    nav {
+        position: relative;
+        background: $White;
+        padding-top: 1.0625rem;
+        padding-bottom: 1.0625rem;
+    }
+
+    &__logo {
+        img {
+            width: 8.8125rem;
+            height: 1.375rem;
+        }
+    }
+
+    &__toogle {
+        //Mobile Menu Toogle
+
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: $DarkBlue;
+            transition: all 300ms ease-in-out;
+            transform-origin: 3px;
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    &__links {
+        // border: 1px solid red;
+        a {
+            font-size: $font-sm;
+            color: $GrayishBlue;
+            transition: color 200ms ease-in-out;
+            position: relative;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 5px;
+                // background: lime;
+                background: linear-gradient(to right, $LimeGreen, $BrightCyan);
+                opacity: 0;
+                display: block;
+                left: 0;
+                right: 0;
+                bottom: -30px;
+                transition: opacity 300ms ease-in-out;
+                border-radius: 3px;
+            }
+            &:hover {
+                color: $DarkBlue;
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+   
+}
