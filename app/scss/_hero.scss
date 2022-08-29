@@ -6,11 +6,13 @@
 
     &__image {
         position: relative;
-        background-image: url(/images/bg-intro-mobile.svg);
+        background-image: url(../../images/bg-intro-mobile.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center center;
-        min-height: 17.5rem;
+        background-position: center 58%;
+        // min-height: 17.5rem;
+        min-height: 21.5rem;
+
 
         @include breakpoint-down(medium){
             z-index: -1;
@@ -30,11 +32,12 @@
         }
 
         &::after {
+            
             content: " ";
             position: absolute;
             height: 100%;
             width: 100%;
-            background-image: url(/images/image-mockups.png);
+            background-image: url(../../images/image-mockups.png);
             background-size: 93%;
             background-repeat: no-repeat;
             background-position: center bottom;
@@ -45,21 +48,21 @@
             }
 
             @include breakpoint-up(large) {
-                width: 100%;
-                height: 115%;
+                width: 98%;
+                height: 116%;
                 background-size: 115%;
                 background-position: left bottom;
-                left: 36%;
+                left: 25%;
                 top: 0%;
                 overflow: hidden;
             }
         }
         &::before {
-            // content: " ";
-            // position: absolute;
-            // background-size: 93%;
-            // background-position: center bottom;
-            // width: 100%;
+            content: " ";
+            position: absolute;
+            background-size: 93%;
+            background-position: center bottom;
+            width: 100%;
 
            
             @include breakpoint-up(large) {
@@ -67,10 +70,11 @@
                 content: " ";
                 height: 100%;
                 width: 150%;
-                background-image: url(/images/bg-intro-desktop.svg);
-                background-size: 115%;
-                background-position: 0 83%;
-                background-position: -71% 100%;
+                background-image: url(../../images/bg-intro-desktop.svg);
+                // background-size: 130%; 
+                background-size: 127%; 
+                background-position: 0 73%;
+                // background-position: -71% 100%;
                 background-repeat: no-repeat;
             }
         }
