@@ -2,8 +2,8 @@
 
 - [Overview](#overview)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
+
+- [Built with](#built-with)
 - [Author](#author)
 
 
@@ -13,12 +13,9 @@
 
 ### Links
 
-- Live Site URL: [Easy Bank](Soon Available Live Url)
+- Live Site URL: [Easy Bank](https://prabh11.github.io/EasyBank.io/)
 
-## My process
-
-
-### Built with
+## Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
